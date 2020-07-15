@@ -39,7 +39,7 @@ class SelectLocationController: UITableViewController, RelayCacheObserver {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         dataSource = DataSource(
             tableView: self.tableView,
             cellProvider: { [weak self] (tableView, indexPath, item) -> UITableViewCell? in
@@ -62,7 +62,7 @@ class SelectLocationController: UITableViewController, RelayCacheObserver {
         })
 
         tableView.dataSource = dataSource
-        
+
         RelayCache.shared.addObserver(self)
         loadData()
     }
